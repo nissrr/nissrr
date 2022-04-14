@@ -1,0 +1,133 @@
+@import "./variables";
+@import "./mixins";
+@import url(normalize.css);
+
+@font-face {
+    font-family: roboto;
+    src: url(../polices/roboto/Roboto-Regular.ttf);;
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url(../polices/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: roboto-light;
+    src: url(../polices/roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: shrikand;
+    src: url(../polices/shrikhand/Shrikhand-Regular.otf);
+}
+
+h1{
+    font-family: shrikand;
+}
+
+body{
+    font-family: roboto;
+}
+
+
+//*************************************************************************************//
+
+.title
+{
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    img {
+        width: 40%;
+    }    
+}
+
+.localisation{
+    display: flex;
+    justify-content: center;
+    background-color: 	#EFEFEF;
+    padding: 4%;
+    font-family: roboto;
+    box-shadow: inset -1px 11px 10px -15px #111;
+    i{
+        padding-right: 15px;
+    }
+}
+
+.découverte{
+    text-align: center;
+    background-color: #F5F5F5;
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        font-family: roboto-bold;
+    }
+    &--txt{
+        font-family: roboto-light;
+        font-weight: bolder;
+        padding-bottom: 5px;
+    } 
+}
+
+.btn{
+    color: white;
+    border-radius: 40px;
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    width: 70%;
+    padding: 20px;
+}
+
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    p{
+        font-family: roboto-bold;
+        padding: 15px;
+        font-size: 25px;
+    }
+}
+
+.btn-2{
+    padding: 25px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    box-shadow: 1px 1px 12px 0px #dcdcdc;
+    width: 75%;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    i{
+        color: grey;
+    }
+    &:active
+    {
+        background-color: #DDA0DD;
+    }
+    &--element{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        &__number{
+            background-color: $color-primary;
+            color: white;
+            font-size: 15px;
+            border-radius: 50%; 
+            width: 25px; 
+            line-height: 25px; 
+            text-align: center;
+        }
+        &__txt{
+            font-family: roboto-bold;
+            }
+    }
+}
+
+
+
+
+
+
+
