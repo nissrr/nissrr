@@ -30,8 +30,15 @@ body{
     font-family: roboto;
 }
 
+img{
+    object-fit: cover;
+}
+
 
 //*************************************************************************************//
+
+
+//*********** HEADER ***********//
 
 .title
 {
@@ -84,17 +91,15 @@ body{
     display: flex;
     flex-direction: column;
     padding-left: 15px;
-    p{
-        font-family: roboto-bold;
-        padding: 15px;
-        font-size: 25px;
+    h2{
+        @include titleh2
     }
 }
 
 .btn-2{
     padding: 25px;
     margin-bottom: 30px;
-    margin-left: 10px;
+    margin-left: 20px;
     box-shadow: 1px 1px 12px 0px #dcdcdc;
     width: 75%;
     border-radius: 20px;
@@ -110,6 +115,8 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-around;
+        position: relative;
+        right: 50px;
         &__number{
             background-color: $color-primary;
             color: white;
@@ -125,6 +132,99 @@ body{
     }
 }
 
+//******** MAIN ********//
+
+main {
+    background-color: #F5F5F5;
+    padding-bottom: 10%;
+    padding-top: 5%;
+    h2{
+    margin-left: 5%;
+    @include titleh2;
+    background-color: #F5F5F5;
+    }
+}
+.restaurant
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &card{
+        width: 330px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 12px 4px #dcdcdc;
+        background-color: white;
+        margin-bottom: 5%;
+        img{
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 170px;
+            width: 330px;
+        }
+        &--element{
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            align-items: center;
+            &__txt{
+                margin-left: 5%;
+                h3{
+                    font-family: roboto-bold;
+                    margin-bottom: 0;
+                }
+                p{
+                    font-family: roboto-light;
+                    margin-top: -10px;
+                    font-size: 18px;
+                }
+                
+            }
+            &__logo{
+                font-size: 25px;
+            }
+        }
+
+    }
+}
+
+//************ FOOTER ************//@at-root
+
+.footer
+{
+    display: flex;
+    flex-direction: column;
+    background-color: lighten(#111, 15%);
+    color: white;
+    h2{
+        font-family: shrikand;
+        font-size: 20px;
+    }
+    p{
+        margin: 0;
+        padding-bottom: 10px;
+    }
+    &--txt{
+        padding-left: 25px;
+        padding-bottom: 20px;
+        &__logo{
+            display: flex;
+            align-items: center;
+            #logo-element-1{
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+            #logo-element-2{
+                font-size: 12px;
+                width: 11px;
+                margin-bottom: 10px;
+            }
+            p {
+                padding-left: 10px;
+            }
+        }
+    }
+    
+}
 
 
 
