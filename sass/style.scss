@@ -34,8 +34,12 @@ img{
     object-fit: cover;
 }
 
+.bold{
+    font-family: roboto-bold;
+}
 
-//*************************************************************************************//
+
+//************************************* PAGE ACCUEIL ***************************************//
 
 
 //*********** HEADER ***********//
@@ -80,11 +84,7 @@ img{
 }
 
 .btn{
-    color: white;
-    border-radius: 40px;
-    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-    width: 70%;
-    padding: 20px;
+    @include btn;
 }
 
 .fonctionnement{
@@ -155,6 +155,10 @@ main {
         box-shadow: 0px 0px 12px 4px #dcdcdc;
         background-color: white;
         margin-bottom: 5%;
+            a{
+            color: black;
+            text-decoration: none;
+            }
         img{
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
@@ -170,6 +174,7 @@ main {
                 margin-left: 5%;
                 h3{
                     font-family: roboto-bold;
+                    font-weight: 300;
                     margin-bottom: 0;
                 }
                 p{
@@ -187,7 +192,7 @@ main {
     }
 }
 
-//************ FOOTER ************//@at-root
+//************ FOOTER ************//
 
 .footer
 {
@@ -225,9 +230,6 @@ main {
     }
     
 }
-
-
-
 
 
 

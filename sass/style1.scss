@@ -1,0 +1,146 @@
+@import "./variables";
+@import "./mixins";
+@import url(normalize.css);
+@import "./keyframes.scss";
+
+@font-face {
+    font-family: roboto;
+    src: url(../polices/roboto/Roboto-Regular.ttf);;
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url(../polices/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: roboto-light;
+    src: url(../polices/roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: shrikand;
+    src: url(../polices/shrikhand/Shrikhand-Regular.otf);
+}
+
+.bold{
+    font-family: roboto-bold;
+    font-weight: 100;
+}
+
+
+//************************************* PAGE 1 ************************************************//
+
+
+//*****  HEADER  ****//
+
+.header
+{
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    #--logo{
+        font-size: 15px;
+        margin-left: 30px;
+    }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    img{
+        width: 40%;
+        padding-left: 70px;
+        align-items: center;
+    } 
+}
+
+//***** MAIN *****//
+
+main{
+    margin-top: 2%;
+    z-index: 1;
+    img{
+        width: 100%;
+        height: 300px;
+        margin-bottom: -80px;
+    }
+}
+
+.menu
+    {
+        background-color: #F5F5F5;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        padding-bottom: 5%;
+        &--title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            font-family: shrikand;
+            h2{
+                margin: 30px;
+                font-weight: 400;
+            }
+            i{
+                font-size: 20px;
+            }
+        }
+        &--1{
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+            &__title{
+                @include titlecard
+                }
+            &__card{
+            @include cardmenu;   
+            }
+        }
+
+        &--2{
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+            &__title{
+                @include titlecard
+            }
+            &__card{
+            @include cardmenu;    
+            }
+        }
+
+        &--3{
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+            &__title{
+                @include titlecard
+            }
+            &__card{
+            @include cardmenu;    
+            }
+        }
+    }
+
+
+.btn{
+    @include btn;
+    width: 50%;
+    margin: 10%;
+    margin-left: 18%;
+    height: 15px;
+    line-height: 1;
+}
+
+//******* FOOTER ******//
+
+.footer{
+    @include footer;
+}
