@@ -12,7 +12,11 @@
         padding: 20px;
         text-align: center;
         font-family: roboto;
+        box-shadow: 0 2px 10px #a4a0a0;
         cursor: pointer;
+        &:hover{
+            animation: btncardhover 600ms ease-in-out forwards;
+        }
 
 }
 
@@ -40,7 +44,13 @@
                     width: 90%;
                     padding-left: 15px;
                     margin-top: -28px;
-                    height: 50px;
+                    p{
+                        font-family: roboto-light;
+                    }
+                    p + p {
+                        font-family: roboto-bold;
+                        font-weight: 300;
+                    }
                     &__check{          
                         position: relative;
                         right: 50px;

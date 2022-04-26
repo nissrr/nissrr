@@ -23,7 +23,7 @@
     src: url(../polices/shrikhand/Shrikhand-Regular.otf);
 }
 
-.bold{
+#bold{
     font-family: roboto-bold;
     font-weight: 100;
 }
@@ -94,37 +94,43 @@ main{
         }
         &--1{
             display: flex;
-    flex-direction: column;
-    align-items: center;
+            flex-direction: column;
+            align-items: center; 
+            animation: menu 800ms ease-in-out forwards;
+            position: relative;
             &__title{
                 @include titlecard
                 }
             &__card{
-            @include cardmenu;   
+            @include cardmenu;
             }
         }
 
         &--2{
             display: flex;
-    flex-direction: column;
-    align-items: center;
+            flex-direction: column;
+            align-items: center;
+            animation: menu 800ms ease-in-out forwards;
+            position: relative;
             &__title{
                 @include titlecard
             }
             &__card{
-            @include cardmenu;    
+            @include cardmenu;  
             }
         }
 
         &--3{
             display: flex;
-    flex-direction: column;
-    align-items: center;
+            flex-direction: column;
+            align-items: center;
+            animation: menu 800ms ease-in-out forwards;
+            position: relative;
             &__title{
                 @include titlecard
             }
             &__card{
-            @include cardmenu;    
+            @include cardmenu;  
             }
         }
     }
