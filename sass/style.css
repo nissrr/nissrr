@@ -257,8 +257,8 @@ img {
 }
 
 .btn:hover {
-  -webkit-animation: btncardhover 600ms ease-in-out forwards;
-          animation: btncardhover 600ms ease-in-out forwards;
+  -webkit-animation: btncardhover 500ms ease-in-out forwards;
+          animation: btncardhover 500ms ease-in-out forwards;
 }
 
 .fonctionnement {
@@ -294,7 +294,7 @@ img {
 }
 
 .btn-2:active {
-  background-color: #DDA0DD;
+  background-color: rgba(147, 86, 221, 0.12);
 }
 
 .btn-2--element {
@@ -402,7 +402,25 @@ main h2 {
   font-size: 18px;
 }
 
-.restaurantcard--element__logo {
+.restaurantcard--element__new {
+  position: relative;
+  bottom: 180px;
+  left: 30px;
+  background-color: #99E2D0;
+  height: 35px;
+  line-height: 0.3;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 3px;
+}
+
+.restaurantcard--element__new p {
+  font-family: roboto-bold;
+  color: green;
+  font-weight: 300;
+}
+
+.restaurantcard__logo {
   font-size: 25px;
 }
 

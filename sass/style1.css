@@ -286,6 +286,10 @@ main img {
 
 .menu--1__card__element p {
   font-family: roboto-light;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menu--1__card__element p + p {
@@ -378,6 +382,10 @@ main img {
 
 .menu--2__card__element p {
   font-family: roboto-light;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menu--2__card__element p + p {
@@ -470,6 +478,10 @@ main img {
 
 .menu--3__card__element p {
   font-family: roboto-light;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menu--3__card__element p + p {
@@ -515,8 +527,8 @@ main img {
 }
 
 .btn:hover {
-  -webkit-animation: btncardhover 600ms ease-in-out forwards;
-          animation: btncardhover 600ms ease-in-out forwards;
+  -webkit-animation: btncardhover 500ms ease-in-out forwards;
+          animation: btncardhover 500ms ease-in-out forwards;
 }
 
 .footer {
