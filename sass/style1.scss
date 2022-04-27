@@ -28,6 +28,10 @@
     font-weight: 100;
 }
 
+img{
+    object-fit: cover;
+}
+
 
 //************************************* PAGE 1 ************************************************//
 
@@ -140,7 +144,7 @@ main{
     @include btn;
     width: 50%;
     margin: 10%;
-    margin-left: 18%;
+    margin-left: 20%;
     height: 15px;
     line-height: 1;
 }
@@ -150,3 +154,196 @@ main{
 .footer{
     @include footer;
 }
+
+@media only screen and (min-width :768px) and (max-width : 959px){
+
+    //******* TABLETTE *******//
+
+.header{
+    justify-content: center;
+    #--logo{
+        font-size: 25px;
+        margin-right: 150px;
+    }
+}
+
+main img{
+    height: 500px;
+}
+
+.menu{
+        &--title{
+            h2{
+            font-size: 35px;
+            margin: 50px;
+            }
+        }
+        &--1{
+            &__title{
+                width: 7%;
+                font-size: 20px;
+            }
+            &__card{
+                width: 70%;
+            h3{
+                font-size: 23px;
+            }
+            &__element p{
+                font-size: 20px;
+            }
+            }
+        }
+        &--2{
+            &__title{
+                width: 7%;
+                font-size: 20px;
+            }
+            &__card{
+                width: 70%;
+            h3{
+                font-size: 23px;
+            }
+            &__element p{
+                font-size: 20px;
+            }
+            }
+        }
+        &--3{
+            &__title{
+                width: 7%;
+                font-size: 20px;
+            }
+            &__card{
+                width: 70%;
+            h3{
+                font-size: 23px;
+            }
+            &__element p{
+                font-size: 20px;
+            }
+            }
+        }
+}
+
+.btn{
+    padding: 27px;
+    line-height: 0.8;
+    font-size: 23px;
+    width: 30%;
+    margin-left: 30%;
+}
+
+.footer--txt{
+    font-size: 25px;
+    h2{
+        font-size: 25px;
+    }
+    &__logo #logo-element-1 {
+        font-size: 20px;
+    }
+    &__logo #logo-element-2 {
+        font-size: 18px;
+        margin-right: 7px;
+    }
+
+}
+
+}
+
+@media only screen and (min-width :959px){
+
+    //******* ORDINATEUR *******//
+
+    .header{
+        justify-content: center;
+        margin-top: 3%;
+        #--logo{
+            font-size: 25px;
+            margin-right: 150px;
+        }
+    }
+    main img{
+        height: 600px;
+    }
+    
+    .menu{
+        padding-bottom: 0;
+            &--title{
+                h2{
+                font-size: 30px;
+                margin: 50px;
+                }
+            }
+            &--1{
+                &__title{
+                    width: 4%;
+                    font-size: 20px;
+                }
+                &__card{
+                    width: 70%;
+                h3{
+                    font-size: 20px;
+                }
+                &__element p{
+                    font-size: 20px;
+                }
+                }
+            }
+            &--2{
+                &__title{
+                    width: 4%;
+                    font-size: 20px;
+                }
+                &__card{
+                    width: 70%;
+                h3{
+                    font-size: 20px;
+                }
+                &__element p{
+                    font-size: 20px;
+                }
+                }
+            }
+            &--3{
+                &__title{
+                    width: 4%;
+                    font-size: 20px;
+                }
+                &__card{
+                    width: 70%;
+                h3{
+                    font-size: 20px;
+                }
+                &__element p{
+                    font-size: 20px;
+                }
+                }
+            }
+    }
+    
+    .btn{
+        margin-left: 37%;
+        width: 25%;
+        font-size: 20px;
+    }
+    
+    .footer{
+        &--txt{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                font-size: 30px;
+            }
+        }
+    
+    }
+    
+}
+
+
+
+
+
+
+
