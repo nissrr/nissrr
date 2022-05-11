@@ -49,11 +49,11 @@ img{
     height: 100%;
     background-color: white;
     position: absolute;
-    z-index: 9999;
+    z-index: 5;
     margin: auto;
     left: 0; bottom: 0; right: 0; top: 0;
-    transform: scale(0);
-    animation-delay: 3s;
+    animation: loader 1s forwards;
+    animation-delay: 2s;
 
 }
 
@@ -114,12 +114,16 @@ img{
 
 .btn{
     @include btn;
+    &:hover{
+    animation: btncardhover 500ms linear forwards;
+    }
 }
 
 .fonctionnement{
     display: flex;
     flex-direction: column;
     padding-left: 15px;
+    padding-bottom: 2%;
     h2{
         @include titleh2
     }
@@ -137,7 +141,7 @@ img{
     i{
         color: grey;
     }
-    &:active
+    &:hover
     {
         background-color: rgba(147, 86, 221, 0.12);
     }
@@ -197,7 +201,7 @@ main {
             a{
             color: black;
             text-decoration: none;
-            width: 70%;
+            width: 90%;
             }
         img{
             border-top-left-radius: 15px;
@@ -226,23 +230,39 @@ main {
             &__new{
                 position: relative;
                 bottom: 180px;
-                left: 30px;
+                left: 40px;
                 background-color: $color-tertiary;
                 height: 35px;
                 line-height: 0.3;
-                padding-left: 15px;
-                padding-right: 15px;
                 border-radius: 3px;
+                width: 40%;
+                text-align: center;
+                margin-left: -100px;
                 p{
                     font-family: roboto-bold;
                     color: green;
                     font-weight: 300;
                 }
             }
-                
-            }
             &__logo{
                 font-size: 25px;
+                .heart-solid{
+                    position: relative;
+                    bottom: 16.5px;
+                    background: linear-gradient(#FF79DA, #9356DC);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;   
+                    opacity: 0;
+                    &:hover{
+                        animation: heart 500ms linear forwards;
+                    }
+                }
+                .heart-regular{
+                    position: relative;
+                    top: 11.5px;
+                }
+            }
+                
             }
         }
 

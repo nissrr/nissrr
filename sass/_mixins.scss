@@ -23,9 +23,11 @@
 @mixin cardmenu{
     background-color: white;
                 box-shadow: 1px 1px 12px 0px #dcdcdc;
-                border-radius: 25px;
+                border-radius: 15px;
                 margin-bottom: 15px;
                 width: 90%;
+                height: 3%;
+                position: relative;
                 h3{
                     font-family: roboto-bold;
                     font-size: 16px;
@@ -33,17 +35,13 @@
                     margin: 0;
                     font-weight: 300;
                     }
-                :hover > .menu--1__card__element__check{
-                    animation: btncard 400ms;
-                    display: block;
-                    }
                 &__element{
                     font-family: roboto;
-                    display: flex;
-                    justify-content: space-between;
                     width: 90%;
                     padding-left: 15px;
                     margin-top: -28px;
+                    display: flex;
+                    justify-content: space-between;
                     p{
                         font-family: roboto-light;
                         font-size: 15px;
@@ -51,26 +49,30 @@
                         white-space: nowrap;
                         overflow: hidden;
                     }
-                    p + p {
+                    .price-hover {
                         font-family: roboto-bold;
                         font-weight: 300;
+                        width: min-content;
+                    }
                     }
                     &__check{          
-                        position: relative;
-                        right: 50px;
-                        cursor: pointer;
-                        display: none;
+                        color: white;
+                        background-color: #99E2D0;
+                        font-size: 26px;
+                        position: absolute;
+                        border-radius: 0px 15px 15px 0px;
+                        transform-origin: right;
+                        right: 0px;
+                        top: 0px;
+                        height: 100%;
+                        width: 20%;
+                        opacity: 0;
                         i{
-                            color: white;
-                            background-color: $color-tertiary;
-                            font-size: 26px;
-                            padding: 22px;
-                            position: absolute;
-                            bottom: 0.5px;
-                            border-top-right-radius: 25px;
-                            border-bottom-right-radius: 25px;
+                            position: relative;
+                            top: 20px;
+                            display: flex;
+                            justify-content: center;
                         }  
-                    }
                 }
 }
 

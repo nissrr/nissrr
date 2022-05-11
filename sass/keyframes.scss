@@ -11,15 +11,13 @@
 
 @keyframes loader {
     0%{
-        transform: scale(1);
+        visibility: visible;
     }
     100%{
-        transform: scale(0);
+        visibility: hidden;
     }
     
 }
-
-
 
 @keyframes btncard{
     0%{
@@ -52,4 +50,77 @@
         opacity: 1;
         top: 0px;
     }
+}
+
+@keyframes heart{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes pricecard {
+        0% {
+            padding-right: 10px;
+        }
+        100% {
+            padding-right: 80px;
+        }
+    }
+
+@keyframes checki{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+    
+.menu--1__card{
+    &:hover{
+        .menu--1__card__check{
+            opacity: 1;
+            animation: btncard 400ms linear forwards;
+            i{
+                animation: checki 400ms linear forwards;
+            }
+        }
+        .price-hover{
+            animation: pricecard 400ms linear forwards;
+        }
+    }
+
+}
+.menu--2__card{
+    &:hover{
+        .menu--2__card__check{
+            opacity: 1;
+            animation: btncard 400ms linear forwards;
+            i{
+                animation: checki 400ms linear forwards;
+            }
+        }
+        .price-hover{
+            animation: pricecard 400ms linear forwards;
+        }
+    }
+
+}
+.menu--3__card{
+    &:hover{
+        .menu--3__card__check{
+            opacity: 1;
+            animation: btncard 400ms linear forwards;
+            i{
+                animation: checki 400ms linear forwards;
+            }
+        }
+        .price-hover{
+            animation: pricecard 400ms linear forwards;
+        }
+    }
+
 }

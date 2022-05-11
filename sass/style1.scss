@@ -70,6 +70,22 @@ main{
     }
 }
 
+.heart-solid{
+    position: absolute;
+    left: 300px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    opacity: 0;
+    &:hover{
+    animation: heart 400ms linear forwards;}
+}
+
+.heart-regular{
+    position: absolute;
+    left: 300px;
+}
+
 .menu
     {
         background-color: #F5F5F5;
@@ -93,14 +109,14 @@ main{
                 font-weight: 400;
             }
             i{
-                font-size: 20px;
+                font-size: 25px;
             }
         }
         &--1{
             display: flex;
             flex-direction: column;
             align-items: center; 
-            animation: menu 800ms ease-in-out forwards;
+            animation: menu 1s ease-in-out forwards;
             position: relative;
             &__title{
                 @include titlecard
@@ -114,7 +130,7 @@ main{
             display: flex;
             flex-direction: column;
             align-items: center;
-            animation: menu 800ms ease-in-out forwards;
+            animation: menu 2s ease-in-out forwards;
             position: relative;
             &__title{
                 @include titlecard
@@ -128,7 +144,7 @@ main{
             display: flex;
             flex-direction: column;
             align-items: center;
-            animation: menu 800ms ease-in-out forwards;
+            animation: menu 3s ease-in-out forwards;
             position: relative;
             &__title{
                 @include titlecard
@@ -195,6 +211,12 @@ main img{
             h3{
                 font-size: 23px;
             }
+            &__check{
+                i{
+                top: 30px;
+                font-size: 30px;
+                }
+            }
             &__element p{
                 font-size: 20px;
             }
@@ -210,6 +232,12 @@ main img{
             h3{
                 font-size: 23px;
             }
+            &__check{
+                i{
+                top: 30px;
+                font-size: 30px;
+                }
+            }
             &__element p{
                 font-size: 20px;
             }
@@ -224,6 +252,13 @@ main img{
                 width: 70%;
             h3{
                 font-size: 23px;
+            }
+            &__check{
+                width: 5%;
+                i{
+                top: 30px;
+                font-size: 30px;
+                }
             }
             &__element p{
                 font-size: 20px;
@@ -300,6 +335,13 @@ main img{
                 h3{
                     font-size: 20px;
                 }
+                &__check{
+                    width: 13%;
+                    i{
+                        top: 28px;
+                        font-size: 35px;
+                    }
+                }
                 &__element p{
                     font-size: 20px;
                 }
@@ -315,6 +357,13 @@ main img{
                 h3{
                     font-size: 20px;
                 }
+                &__check{
+                    width: 13%;
+                    i{
+                        top: 28px;
+                        font-size: 35px;
+                    }
+                }
                 &__element p{
                     font-size: 20px;
                 }
@@ -329,6 +378,13 @@ main img{
                     width: 70%;
                 h3{
                     font-size: 20px;
+                }
+                &__check{
+                    width: 13%;
+                    i{
+                        top: 28px;
+                        font-size: 35px;
+                    }
                 }
                 &__element p{
                     font-size: 20px;

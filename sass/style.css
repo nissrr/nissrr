@@ -23,23 +23,19 @@
 
 @-webkit-keyframes loader {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    visibility: visible;
   }
   100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    visibility: hidden;
   }
 }
 
 @keyframes loader {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    visibility: visible;
   }
   100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    visibility: hidden;
   }
 }
 
@@ -113,6 +109,112 @@
   }
 }
 
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pricecard {
+  0% {
+    padding-right: 10px;
+  }
+  100% {
+    padding-right: 80px;
+  }
+}
+
+@keyframes pricecard {
+  0% {
+    padding-right: 10px;
+  }
+  100% {
+    padding-right: 80px;
+  }
+}
+
+@-webkit-keyframes checki {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes checki {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.menu--1__card:hover .menu--1__card__check {
+  opacity: 1;
+  -webkit-animation: btncard 400ms linear forwards;
+          animation: btncard 400ms linear forwards;
+}
+
+.menu--1__card:hover .menu--1__card__check i {
+  -webkit-animation: checki 400ms linear forwards;
+          animation: checki 400ms linear forwards;
+}
+
+.menu--1__card:hover .price-hover {
+  -webkit-animation: pricecard 400ms linear forwards;
+          animation: pricecard 400ms linear forwards;
+}
+
+.menu--2__card:hover .menu--2__card__check {
+  opacity: 1;
+  -webkit-animation: btncard 400ms linear forwards;
+          animation: btncard 400ms linear forwards;
+}
+
+.menu--2__card:hover .menu--2__card__check i {
+  -webkit-animation: checki 400ms linear forwards;
+          animation: checki 400ms linear forwards;
+}
+
+.menu--2__card:hover .price-hover {
+  -webkit-animation: pricecard 400ms linear forwards;
+          animation: pricecard 400ms linear forwards;
+}
+
+.menu--3__card:hover .menu--3__card__check {
+  opacity: 1;
+  -webkit-animation: btncard 400ms linear forwards;
+          animation: btncard 400ms linear forwards;
+}
+
+.menu--3__card:hover .menu--3__card__check i {
+  -webkit-animation: checki 400ms linear forwards;
+          animation: checki 400ms linear forwards;
+}
+
+.menu--3__card:hover .price-hover {
+  -webkit-animation: pricecard 400ms linear forwards;
+          animation: pricecard 400ms linear forwards;
+}
+
 @font-face {
   font-family: roboto;
   src: url(../polices/roboto/Roboto-Regular.ttf);
@@ -155,16 +257,16 @@ img {
   height: 100%;
   background-color: white;
   position: absolute;
-  z-index: 9999;
+  z-index: 5;
   margin: auto;
   left: 0;
   bottom: 0;
   right: 0;
   top: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation: loader 1s forwards;
+          animation: loader 1s forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .chargement {
@@ -261,6 +363,11 @@ img {
           animation: btncardhover 500ms ease-in-out forwards;
 }
 
+.btn:hover {
+  -webkit-animation: btncardhover 500ms linear forwards;
+          animation: btncardhover 500ms linear forwards;
+}
+
 .fonctionnement {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,6 +377,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 15px;
+  padding-bottom: 2%;
 }
 
 .fonctionnement h2 {
@@ -294,7 +402,7 @@ img {
   color: grey;
 }
 
-.btn-2:active {
+.btn-2:hover {
   background-color: rgba(147, 86, 221, 0.12);
 }
 
@@ -379,7 +487,7 @@ main h2 {
 .restaurantcard a {
   color: black;
   text-decoration: none;
-  width: 70%;
+  width: 90%;
 }
 
 .restaurantcard img {
@@ -421,13 +529,14 @@ main h2 {
 .restaurantcard--element__new {
   position: relative;
   bottom: 180px;
-  left: 30px;
+  left: 40px;
   background-color: #99E2D0;
   height: 35px;
   line-height: 0.3;
-  padding-left: 15px;
-  padding-right: 15px;
   border-radius: 3px;
+  width: 40%;
+  text-align: center;
+  margin-left: -100px;
 }
 
 .restaurantcard--element__new p {
@@ -436,8 +545,28 @@ main h2 {
   font-weight: 300;
 }
 
-.restaurantcard__logo {
+.restaurantcard--element__logo {
   font-size: 25px;
+}
+
+.restaurantcard--element__logo .heart-solid {
+  position: relative;
+  bottom: 16.5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+.restaurantcard--element__logo .heart-solid:hover {
+  -webkit-animation: heart 500ms linear forwards;
+          animation: heart 500ms linear forwards;
+}
+
+.restaurantcard--element__logo .heart-regular {
+  position: relative;
+  top: 11.5px;
 }
 
 .footer {

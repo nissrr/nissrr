@@ -22,23 +22,19 @@
 
 @-webkit-keyframes loader {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    visibility: visible;
   }
   100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    visibility: hidden;
   }
 }
 
 @keyframes loader {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    visibility: visible;
   }
   100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    visibility: hidden;
   }
 }
 
@@ -112,6 +108,112 @@
   }
 }
 
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pricecard {
+  0% {
+    padding-right: 10px;
+  }
+  100% {
+    padding-right: 80px;
+  }
+}
+
+@keyframes pricecard {
+  0% {
+    padding-right: 10px;
+  }
+  100% {
+    padding-right: 80px;
+  }
+}
+
+@-webkit-keyframes checki {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes checki {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.menu--1__card:hover .menu--1__card__check {
+  opacity: 1;
+  -webkit-animation: btncard 400ms linear forwards;
+          animation: btncard 400ms linear forwards;
+}
+
+.menu--1__card:hover .menu--1__card__check i {
+  -webkit-animation: checki 400ms linear forwards;
+          animation: checki 400ms linear forwards;
+}
+
+.menu--1__card:hover .price-hover {
+  -webkit-animation: pricecard 400ms linear forwards;
+          animation: pricecard 400ms linear forwards;
+}
+
+.menu--2__card:hover .menu--2__card__check {
+  opacity: 1;
+  -webkit-animation: btncard 400ms linear forwards;
+          animation: btncard 400ms linear forwards;
+}
+
+.menu--2__card:hover .menu--2__card__check i {
+  -webkit-animation: checki 400ms linear forwards;
+          animation: checki 400ms linear forwards;
+}
+
+.menu--2__card:hover .price-hover {
+  -webkit-animation: pricecard 400ms linear forwards;
+          animation: pricecard 400ms linear forwards;
+}
+
+.menu--3__card:hover .menu--3__card__check {
+  opacity: 1;
+  -webkit-animation: btncard 400ms linear forwards;
+          animation: btncard 400ms linear forwards;
+}
+
+.menu--3__card:hover .menu--3__card__check i {
+  -webkit-animation: checki 400ms linear forwards;
+          animation: checki 400ms linear forwards;
+}
+
+.menu--3__card:hover .price-hover {
+  -webkit-animation: pricecard 400ms linear forwards;
+          animation: pricecard 400ms linear forwards;
+}
+
 @font-face {
   font-family: roboto;
   src: url(../polices/roboto/Roboto-Regular.ttf);
@@ -181,6 +283,26 @@ main img {
   margin-bottom: -80px;
 }
 
+.heart-solid {
+  position: absolute;
+  left: 300px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+.heart-solid:hover {
+  -webkit-animation: heart 400ms linear forwards;
+          animation: heart 400ms linear forwards;
+}
+
+.heart-regular {
+  position: absolute;
+  left: 300px;
+}
+
 .menu {
   background-color: #F5F5F5;
   width: 100%;
@@ -221,7 +343,7 @@ main img {
 }
 
 .menu--title i {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .menu--1 {
@@ -235,8 +357,8 @@ main img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: menu 800ms ease-in-out forwards;
-          animation: menu 800ms ease-in-out forwards;
+  -webkit-animation: menu 1s ease-in-out forwards;
+          animation: menu 1s ease-in-out forwards;
   position: relative;
 }
 
@@ -257,9 +379,11 @@ main img {
   background-color: white;
   -webkit-box-shadow: 1px 1px 12px 0px #dcdcdc;
           box-shadow: 1px 1px 12px 0px #dcdcdc;
-  border-radius: 25px;
+  border-radius: 15px;
   margin-bottom: 15px;
   width: 90%;
+  height: 3%;
+  position: relative;
 }
 
 .menu--1__card h3 {
@@ -270,23 +394,17 @@ main img {
   font-weight: 300;
 }
 
-.menu--1__card :hover > .menu--1__card__element__check {
-  -webkit-animation: btncard 400ms;
-          animation: btncard 400ms;
-  display: block;
-}
-
 .menu--1__card__element {
   font-family: roboto;
+  width: 90%;
+  padding-left: 15px;
+  margin-top: -28px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 90%;
-  padding-left: 15px;
-  margin-top: -28px;
 }
 
 .menu--1__card__element p {
@@ -297,27 +415,38 @@ main img {
   overflow: hidden;
 }
 
-.menu--1__card__element p + p {
+.menu--1__card__element .price-hover {
   font-family: roboto-bold;
   font-weight: 300;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 
-.menu--1__card__element__check {
-  position: relative;
-  right: 50px;
-  cursor: pointer;
-  display: none;
-}
-
-.menu--1__card__element__check i {
+.menu--1__card__check {
   color: white;
   background-color: #99E2D0;
   font-size: 26px;
-  padding: 22px;
   position: absolute;
-  bottom: 0.5px;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-radius: 0px 15px 15px 0px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 20%;
+  opacity: 0;
+}
+
+.menu--1__card__check i {
+  position: relative;
+  top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .menu--2 {
@@ -331,8 +460,8 @@ main img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: menu 800ms ease-in-out forwards;
-          animation: menu 800ms ease-in-out forwards;
+  -webkit-animation: menu 2s ease-in-out forwards;
+          animation: menu 2s ease-in-out forwards;
   position: relative;
 }
 
@@ -353,9 +482,11 @@ main img {
   background-color: white;
   -webkit-box-shadow: 1px 1px 12px 0px #dcdcdc;
           box-shadow: 1px 1px 12px 0px #dcdcdc;
-  border-radius: 25px;
+  border-radius: 15px;
   margin-bottom: 15px;
   width: 90%;
+  height: 3%;
+  position: relative;
 }
 
 .menu--2__card h3 {
@@ -366,23 +497,17 @@ main img {
   font-weight: 300;
 }
 
-.menu--2__card :hover > .menu--1__card__element__check {
-  -webkit-animation: btncard 400ms;
-          animation: btncard 400ms;
-  display: block;
-}
-
 .menu--2__card__element {
   font-family: roboto;
+  width: 90%;
+  padding-left: 15px;
+  margin-top: -28px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 90%;
-  padding-left: 15px;
-  margin-top: -28px;
 }
 
 .menu--2__card__element p {
@@ -393,27 +518,38 @@ main img {
   overflow: hidden;
 }
 
-.menu--2__card__element p + p {
+.menu--2__card__element .price-hover {
   font-family: roboto-bold;
   font-weight: 300;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 
-.menu--2__card__element__check {
-  position: relative;
-  right: 50px;
-  cursor: pointer;
-  display: none;
-}
-
-.menu--2__card__element__check i {
+.menu--2__card__check {
   color: white;
   background-color: #99E2D0;
   font-size: 26px;
-  padding: 22px;
   position: absolute;
-  bottom: 0.5px;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-radius: 0px 15px 15px 0px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 20%;
+  opacity: 0;
+}
+
+.menu--2__card__check i {
+  position: relative;
+  top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .menu--3 {
@@ -427,8 +563,8 @@ main img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: menu 800ms ease-in-out forwards;
-          animation: menu 800ms ease-in-out forwards;
+  -webkit-animation: menu 3s ease-in-out forwards;
+          animation: menu 3s ease-in-out forwards;
   position: relative;
 }
 
@@ -449,9 +585,11 @@ main img {
   background-color: white;
   -webkit-box-shadow: 1px 1px 12px 0px #dcdcdc;
           box-shadow: 1px 1px 12px 0px #dcdcdc;
-  border-radius: 25px;
+  border-radius: 15px;
   margin-bottom: 15px;
   width: 90%;
+  height: 3%;
+  position: relative;
 }
 
 .menu--3__card h3 {
@@ -462,23 +600,17 @@ main img {
   font-weight: 300;
 }
 
-.menu--3__card :hover > .menu--1__card__element__check {
-  -webkit-animation: btncard 400ms;
-          animation: btncard 400ms;
-  display: block;
-}
-
 .menu--3__card__element {
   font-family: roboto;
+  width: 90%;
+  padding-left: 15px;
+  margin-top: -28px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 90%;
-  padding-left: 15px;
-  margin-top: -28px;
 }
 
 .menu--3__card__element p {
@@ -489,27 +621,38 @@ main img {
   overflow: hidden;
 }
 
-.menu--3__card__element p + p {
+.menu--3__card__element .price-hover {
   font-family: roboto-bold;
   font-weight: 300;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 
-.menu--3__card__element__check {
-  position: relative;
-  right: 50px;
-  cursor: pointer;
-  display: none;
-}
-
-.menu--3__card__element__check i {
+.menu--3__card__check {
   color: white;
   background-color: #99E2D0;
   font-size: 26px;
-  padding: 22px;
   position: absolute;
-  bottom: 0.5px;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-radius: 0px 15px 15px 0px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 20%;
+  opacity: 0;
+}
+
+.menu--3__card__check i {
+  position: relative;
+  top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .btn {
@@ -614,6 +757,10 @@ main img {
   .menu--1__card h3 {
     font-size: 23px;
   }
+  .menu--1__card__check i {
+    top: 30px;
+    font-size: 30px;
+  }
   .menu--1__card__element p {
     font-size: 20px;
   }
@@ -627,6 +774,10 @@ main img {
   .menu--2__card h3 {
     font-size: 23px;
   }
+  .menu--2__card__check i {
+    top: 30px;
+    font-size: 30px;
+  }
   .menu--2__card__element p {
     font-size: 20px;
   }
@@ -639,6 +790,13 @@ main img {
   }
   .menu--3__card h3 {
     font-size: 23px;
+  }
+  .menu--3__card__check {
+    width: 5%;
+  }
+  .menu--3__card__check i {
+    top: 30px;
+    font-size: 30px;
   }
   .menu--3__card__element p {
     font-size: 20px;
@@ -696,6 +854,13 @@ main img {
   .menu--1__card h3 {
     font-size: 20px;
   }
+  .menu--1__card__check {
+    width: 13%;
+  }
+  .menu--1__card__check i {
+    top: 28px;
+    font-size: 35px;
+  }
   .menu--1__card__element p {
     font-size: 20px;
   }
@@ -709,6 +874,13 @@ main img {
   .menu--2__card h3 {
     font-size: 20px;
   }
+  .menu--2__card__check {
+    width: 13%;
+  }
+  .menu--2__card__check i {
+    top: 28px;
+    font-size: 35px;
+  }
   .menu--2__card__element p {
     font-size: 20px;
   }
@@ -721,6 +893,13 @@ main img {
   }
   .menu--3__card h3 {
     font-size: 20px;
+  }
+  .menu--3__card__check {
+    width: 13%;
+  }
+  .menu--3__card__check i {
+    top: 28px;
+    font-size: 35px;
   }
   .menu--3__card__element p {
     font-size: 20px;
