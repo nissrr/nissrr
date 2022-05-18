@@ -3,6 +3,7 @@
         padding: 15px;
         font-size: 25px;
 }
+//** titre H2 de la page accueil **//
 
 @mixin btn{
         color: white;
@@ -15,14 +16,14 @@
         box-shadow: 0 2px 10px #a4a0a0;
         cursor: pointer;
         &:hover{
-            animation: btncardhover 500ms ease-in-out forwards;
+            animation: btn-hover 500ms ease-in-out forwards;
         }
 
 }
 
 @mixin cardmenu{
     background-color: white;
-                box-shadow: 1px 1px 12px 0px #dcdcdc;
+                box-shadow: 11px 6px 8px 0 #dcdcdc;;
                 border-radius: 15px;
                 margin-bottom: 15px;
                 width: 90%;
@@ -48,6 +49,9 @@
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         overflow: hidden;
+                    }
+                    p + p {
+                        text-overflow: initial;
                     }
                     .price-hover {
                         font-family: roboto-bold;
@@ -76,9 +80,7 @@
                 }
 }
 
-
-
-@mixin titlecard{
+@mixin titlecardmenu{
     font-family: roboto-light;
                 font-size: 13px;
                 margin-left: 7%;

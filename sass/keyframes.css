@@ -38,55 +38,25 @@
   }
 }
 
-@-webkit-keyframes btncard {
+@-webkit-keyframes heart-hover {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    opacity: 1;
   }
 }
 
-@keyframes btncard {
+@keyframes heart-hover {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    opacity: 1;
   }
 }
 
-@-webkit-keyframes btncardhover {
-  0% {
-    -webkit-filter: brightness(100%);
-            filter: brightness(100%);
-  }
-  100% {
-    -webkit-filter: brightness(115%);
-            filter: brightness(115%);
-    -webkit-box-shadow: 0 6px 27px #828282;
-            box-shadow: 0 6px 27px #828282;
-  }
-}
-
-@keyframes btncardhover {
-  0% {
-    -webkit-filter: brightness(100%);
-            filter: brightness(100%);
-  }
-  100% {
-    -webkit-filter: brightness(115%);
-            filter: brightness(115%);
-    -webkit-box-shadow: 0 6px 27px #828282;
-            box-shadow: 0 6px 27px #828282;
-  }
-}
-
-@-webkit-keyframes menu {
+@-webkit-keyframes cardmenu-apparition {
   0% {
     opacity: 0;
     top: 15px;
@@ -97,7 +67,7 @@
   }
 }
 
-@keyframes menu {
+@keyframes cardmenu-apparition {
   0% {
     opacity: 0;
     top: 15px;
@@ -108,42 +78,7 @@
   }
 }
 
-@-webkit-keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes pricecard {
-  0% {
-    padding-right: 10px;
-  }
-  100% {
-    padding-right: 80px;
-  }
-}
-
-@keyframes pricecard {
-  0% {
-    padding-right: 10px;
-  }
-  100% {
-    padding-right: 80px;
-  }
-}
-
+/* CHECK */
 @-webkit-keyframes checki {
   0% {
     -webkit-transform: rotate(0);
@@ -154,7 +89,6 @@
             transform: rotate(360deg);
   }
 }
-
 @keyframes checki {
   0% {
     -webkit-transform: rotate(0);
@@ -166,10 +100,50 @@
   }
 }
 
+@-webkit-keyframes checkcardmenu {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes checkcardmenu {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes pricecardmenu {
+  0% {
+    padding-right: 10px;
+  }
+  100% {
+    padding-right: 80px;
+  }
+}
+
+@keyframes pricecardmenu {
+  0% {
+    padding-right: 10px;
+  }
+  100% {
+    padding-right: 80px;
+  }
+}
+
 .menu--1__card:hover .menu--1__card__check {
   opacity: 1;
-  -webkit-animation: btncard 400ms linear forwards;
-          animation: btncard 400ms linear forwards;
+  -webkit-animation: checkcardmenu 400ms linear forwards;
+          animation: checkcardmenu 400ms linear forwards;
 }
 
 .menu--1__card:hover .menu--1__card__check i {
@@ -178,14 +152,14 @@
 }
 
 .menu--1__card:hover .price-hover {
-  -webkit-animation: pricecard 400ms linear forwards;
-          animation: pricecard 400ms linear forwards;
+  -webkit-animation: pricecardmenu 400ms linear forwards;
+          animation: pricecardmenu 400ms linear forwards;
 }
 
 .menu--2__card:hover .menu--2__card__check {
   opacity: 1;
-  -webkit-animation: btncard 400ms linear forwards;
-          animation: btncard 400ms linear forwards;
+  -webkit-animation: checkcardmenu 400ms linear forwards;
+          animation: checkcardmenu 400ms linear forwards;
 }
 
 .menu--2__card:hover .menu--2__card__check i {
@@ -194,14 +168,14 @@
 }
 
 .menu--2__card:hover .price-hover {
-  -webkit-animation: pricecard 400ms linear forwards;
-          animation: pricecard 400ms linear forwards;
+  -webkit-animation: pricecardmenu 400ms linear forwards;
+          animation: pricecardmenu 400ms linear forwards;
 }
 
 .menu--3__card:hover .menu--3__card__check {
   opacity: 1;
-  -webkit-animation: btncard 400ms linear forwards;
-          animation: btncard 400ms linear forwards;
+  -webkit-animation: checkcardmenu 400ms linear forwards;
+          animation: checkcardmenu 400ms linear forwards;
 }
 
 .menu--3__card:hover .menu--3__card__check i {
@@ -210,7 +184,33 @@
 }
 
 .menu--3__card:hover .price-hover {
-  -webkit-animation: pricecard 400ms linear forwards;
-          animation: pricecard 400ms linear forwards;
+  -webkit-animation: pricecardmenu 400ms linear forwards;
+          animation: pricecardmenu 400ms linear forwards;
+}
+
+@-webkit-keyframes btn-hover {
+  0% {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  100% {
+    -webkit-filter: brightness(115%);
+            filter: brightness(115%);
+    -webkit-box-shadow: 0 6px 27px #828282;
+            box-shadow: 0 6px 27px #828282;
+  }
+}
+
+@keyframes btn-hover {
+  0% {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  100% {
+    -webkit-filter: brightness(115%);
+            filter: brightness(115%);
+    -webkit-box-shadow: 0 6px 27px #828282;
+            box-shadow: 0 6px 27px #828282;
+  }
 }
 /*# sourceMappingURL=keyframes.css.map */

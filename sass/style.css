@@ -39,55 +39,25 @@
   }
 }
 
-@-webkit-keyframes btncard {
+@-webkit-keyframes heart-hover {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    opacity: 1;
   }
 }
 
-@keyframes btncard {
+@keyframes heart-hover {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    opacity: 1;
   }
 }
 
-@-webkit-keyframes btncardhover {
-  0% {
-    -webkit-filter: brightness(100%);
-            filter: brightness(100%);
-  }
-  100% {
-    -webkit-filter: brightness(115%);
-            filter: brightness(115%);
-    -webkit-box-shadow: 0 6px 27px #828282;
-            box-shadow: 0 6px 27px #828282;
-  }
-}
-
-@keyframes btncardhover {
-  0% {
-    -webkit-filter: brightness(100%);
-            filter: brightness(100%);
-  }
-  100% {
-    -webkit-filter: brightness(115%);
-            filter: brightness(115%);
-    -webkit-box-shadow: 0 6px 27px #828282;
-            box-shadow: 0 6px 27px #828282;
-  }
-}
-
-@-webkit-keyframes menu {
+@-webkit-keyframes cardmenu-apparition {
   0% {
     opacity: 0;
     top: 15px;
@@ -98,7 +68,7 @@
   }
 }
 
-@keyframes menu {
+@keyframes cardmenu-apparition {
   0% {
     opacity: 0;
     top: 15px;
@@ -109,42 +79,7 @@
   }
 }
 
-@-webkit-keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes pricecard {
-  0% {
-    padding-right: 10px;
-  }
-  100% {
-    padding-right: 80px;
-  }
-}
-
-@keyframes pricecard {
-  0% {
-    padding-right: 10px;
-  }
-  100% {
-    padding-right: 80px;
-  }
-}
-
+/* CHECK */
 @-webkit-keyframes checki {
   0% {
     -webkit-transform: rotate(0);
@@ -155,7 +90,6 @@
             transform: rotate(360deg);
   }
 }
-
 @keyframes checki {
   0% {
     -webkit-transform: rotate(0);
@@ -167,10 +101,50 @@
   }
 }
 
+@-webkit-keyframes checkcardmenu {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes checkcardmenu {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes pricecardmenu {
+  0% {
+    padding-right: 10px;
+  }
+  100% {
+    padding-right: 80px;
+  }
+}
+
+@keyframes pricecardmenu {
+  0% {
+    padding-right: 10px;
+  }
+  100% {
+    padding-right: 80px;
+  }
+}
+
 .menu--1__card:hover .menu--1__card__check {
   opacity: 1;
-  -webkit-animation: btncard 400ms linear forwards;
-          animation: btncard 400ms linear forwards;
+  -webkit-animation: checkcardmenu 400ms linear forwards;
+          animation: checkcardmenu 400ms linear forwards;
 }
 
 .menu--1__card:hover .menu--1__card__check i {
@@ -179,14 +153,14 @@
 }
 
 .menu--1__card:hover .price-hover {
-  -webkit-animation: pricecard 400ms linear forwards;
-          animation: pricecard 400ms linear forwards;
+  -webkit-animation: pricecardmenu 400ms linear forwards;
+          animation: pricecardmenu 400ms linear forwards;
 }
 
 .menu--2__card:hover .menu--2__card__check {
   opacity: 1;
-  -webkit-animation: btncard 400ms linear forwards;
-          animation: btncard 400ms linear forwards;
+  -webkit-animation: checkcardmenu 400ms linear forwards;
+          animation: checkcardmenu 400ms linear forwards;
 }
 
 .menu--2__card:hover .menu--2__card__check i {
@@ -195,14 +169,14 @@
 }
 
 .menu--2__card:hover .price-hover {
-  -webkit-animation: pricecard 400ms linear forwards;
-          animation: pricecard 400ms linear forwards;
+  -webkit-animation: pricecardmenu 400ms linear forwards;
+          animation: pricecardmenu 400ms linear forwards;
 }
 
 .menu--3__card:hover .menu--3__card__check {
   opacity: 1;
-  -webkit-animation: btncard 400ms linear forwards;
-          animation: btncard 400ms linear forwards;
+  -webkit-animation: checkcardmenu 400ms linear forwards;
+          animation: checkcardmenu 400ms linear forwards;
 }
 
 .menu--3__card:hover .menu--3__card__check i {
@@ -211,8 +185,34 @@
 }
 
 .menu--3__card:hover .price-hover {
-  -webkit-animation: pricecard 400ms linear forwards;
-          animation: pricecard 400ms linear forwards;
+  -webkit-animation: pricecardmenu 400ms linear forwards;
+          animation: pricecardmenu 400ms linear forwards;
+}
+
+@-webkit-keyframes btn-hover {
+  0% {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  100% {
+    -webkit-filter: brightness(115%);
+            filter: brightness(115%);
+    -webkit-box-shadow: 0 6px 27px #828282;
+            box-shadow: 0 6px 27px #828282;
+  }
+}
+
+@keyframes btn-hover {
+  0% {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  100% {
+    -webkit-filter: brightness(115%);
+            filter: brightness(115%);
+    -webkit-box-shadow: 0 6px 27px #828282;
+            box-shadow: 0 6px 27px #828282;
+  }
 }
 
 @font-face {
@@ -256,13 +256,14 @@ img {
   width: 100%;
   height: 100%;
   background-color: white;
-  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
   z-index: 5;
-  margin: auto;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
   -webkit-animation: loader 1s forwards;
           animation: loader 1s forwards;
   -webkit-animation-delay: 2s;
@@ -359,13 +360,13 @@ img {
 }
 
 .btn:hover {
-  -webkit-animation: btncardhover 500ms ease-in-out forwards;
-          animation: btncardhover 500ms ease-in-out forwards;
+  -webkit-animation: btn-hover 500ms ease-in-out forwards;
+          animation: btn-hover 500ms ease-in-out forwards;
 }
 
 .btn:hover {
-  -webkit-animation: btncardhover 500ms linear forwards;
-          animation: btncardhover 500ms linear forwards;
+  -webkit-animation: btn-hover 500ms linear forwards;
+          animation: btn-hover 500ms linear forwards;
 }
 
 .fonctionnement {
@@ -404,6 +405,10 @@ img {
 
 .btn-2:hover {
   background-color: rgba(147, 86, 221, 0.12);
+}
+
+.btn-2:hover i {
+  color: #9356DC;
 }
 
 .btn-2--element {
@@ -447,21 +452,7 @@ main h2 {
   background-color: #F5F5F5;
 }
 
-.restaurantcard1 {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.restaurantcard2 {
+.restaurantcard1, .restaurantcard2 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -529,7 +520,7 @@ main h2 {
 .restaurantcard--element__new {
   position: relative;
   bottom: 180px;
-  left: 40px;
+  left: 65px;
   background-color: #99E2D0;
   height: 35px;
   line-height: 0.3;
@@ -545,11 +536,11 @@ main h2 {
   font-weight: 300;
 }
 
-.restaurantcard--element__logo {
+.restaurantcard--element__heart {
   font-size: 25px;
 }
 
-.restaurantcard--element__logo .heart-solid {
+.restaurantcard--element__heart .heart-solid {
   position: relative;
   bottom: 16.5px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
@@ -559,12 +550,12 @@ main h2 {
   opacity: 0;
 }
 
-.restaurantcard--element__logo .heart-solid:hover {
-  -webkit-animation: heart 500ms linear forwards;
-          animation: heart 500ms linear forwards;
+.restaurantcard--element__heart .heart-solid:hover {
+  -webkit-animation: heart-hover 500ms linear forwards;
+          animation: heart-hover 500ms linear forwards;
 }
 
-.restaurantcard--element__logo .heart-regular {
+.restaurantcard--element__heart .heart-regular {
   position: relative;
   top: 11.5px;
 }
@@ -624,7 +615,7 @@ main h2 {
   .découverte {
     font-size: 20px;
   }
-  .localisation {
+  .header--localisation {
     font-size: 23px;
   }
   .fonctionnement {
@@ -638,6 +629,7 @@ main h2 {
   }
   .btn-2--element {
     width: 74%;
+    margin-left: 20px;
   }
   .btn-2--element__number {
     padding: 3px;
@@ -702,6 +694,9 @@ main h2 {
 @media only screen and (min-width: 960px) {
   .header--title img {
     width: 20%;
+  }
+  .header--localisation {
+    font-size: 20px;
   }
   .header--découverte {
     padding: 5%;

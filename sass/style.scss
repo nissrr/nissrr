@@ -48,10 +48,10 @@ img{
     width: 100%;
     height: 100%;
     background-color: white;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    position: fixed;
     z-index: 5;
-    margin: auto;
-    left: 0; bottom: 0; right: 0; top: 0;
     animation: loader 1s forwards;
     animation-delay: 2s;
 
@@ -115,7 +115,7 @@ img{
 .btn{
     @include btn;
     &:hover{
-    animation: btncardhover 500ms linear forwards;
+    animation: btn-hover 500ms linear forwards;
     }
 }
 
@@ -144,6 +144,11 @@ img{
     &:hover
     {
         background-color: rgba(147, 86, 221, 0.12);
+        i{
+        
+            color: $color-primary;
+        
+        }
     }
     &--element{
         display: flex;
@@ -180,13 +185,7 @@ main {
 }
 .restaurant
 {
-    &card1{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    &card2{
+    &card1, &card2{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -203,70 +202,70 @@ main {
             text-decoration: none;
             width: 90%;
             }
-        img{
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            height: 170px;
-            width: 330px;
-        }
-        &--element{
-            display: flex;
-            justify-content: space-between;
-            width: 300px;
-            align-items: center;
-            &__txt{
-                margin-left: 5%;
-                h3{
-                    font-family: roboto-bold;
-                    font-weight: 300;
-                    margin-bottom: 0;
-                }
-                p{
-                    font-family: roboto-light;
-                    margin-top: -10px;
-                    font-size: 18px;
-                }
+            img{
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                height: 170px;
+                width: 330px;
             }
-            &__new{
-                position: relative;
-                bottom: 180px;
-                left: 40px;
-                background-color: $color-tertiary;
-                height: 35px;
-                line-height: 0.3;
-                border-radius: 3px;
-                width: 40%;
-                text-align: center;
-                margin-left: -100px;
-                p{
-                    font-family: roboto-bold;
-                    color: green;
-                    font-weight: 300;
-                }
-            }
-            &__logo{
-                font-size: 25px;
-                .heart-solid{
-                    position: relative;
-                    bottom: 16.5px;
-                    background: linear-gradient(#FF79DA, #9356DC);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;   
-                    opacity: 0;
-                    &:hover{
-                        animation: heart 500ms linear forwards;
+            &--element{
+                display: flex;
+                justify-content: space-between;
+                width: 300px;
+                align-items: center;
+                &__txt{
+                    margin-left: 5%;
+                    h3{
+                        font-family: roboto-bold;
+                        font-weight: 300;
+                        margin-bottom: 0;
+                    }
+                    p{
+                        font-family: roboto-light;
+                        margin-top: -10px;
+                        font-size: 18px;
                     }
                 }
-                .heart-regular{
+                &__new{
                     position: relative;
-                    top: 11.5px;
+                    bottom: 180px;
+                    left: 65px;
+                    background-color: $color-tertiary;
+                    height: 35px;
+                    line-height: 0.3;
+                    border-radius: 3px;
+                    width: 40%;
+                    text-align: center;
+                    margin-left: -100px;
+                    p{
+                        font-family: roboto-bold;
+                        color: green;
+                        font-weight: 300;
+                    }
+                }
+                &__heart{
+                    font-size: 25px;
+                    .heart-solid{
+                        position: relative;
+                        bottom: 16.5px;
+                        background: linear-gradient(#FF79DA, #9356DC);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;   
+                        opacity: 0;
+                        &:hover{
+                            animation: heart-hover 500ms linear forwards;
+                        }
+                    }
+                    .heart-regular{
+                        position: relative;
+                        top: 11.5px;
+                    }
+                }
+                    
                 }
             }
-                
-            }
-        }
 
-    }
+        }
 
 
 //************ FOOTER ************//
@@ -317,7 +316,7 @@ main {
         font-size: 20px;
     }
 
-    .localisation{
+    .header--localisation{
         font-size: 23px;
     }
 
@@ -329,6 +328,7 @@ main {
         margin-left: 0;
         &--element{
             width: 74%;
+            margin-left: 20px;
             &__number{
                 padding: 3px;
             }
@@ -396,6 +396,8 @@ main {
 
 }
 
+
+
      //******* ORDINATEUR *******//
 
      @media only screen and (min-width :960px){
@@ -403,6 +405,9 @@ main {
     .header{
         &--title img{
             width: 20%;
+        }
+        &--localisation{
+            font-size: 20px;
         }
         &--découverte{
             padding: 5%;

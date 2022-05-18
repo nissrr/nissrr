@@ -33,7 +33,7 @@ img{
 }
 
 
-//************************************* PAGE 1 ************************************************//
+//************************************* PAGE MENU ************************************************//
 
 
 //*****  HEADER  ****//
@@ -44,8 +44,10 @@ img{
     align-items: center;
     margin-top: 5%;
     #--logo{
-        font-size: 15px;
+        font-size: 20px;
         margin-left: 30px;
+        margin-bottom: 4px;
+
     }
         a{
             text-decoration: none;
@@ -78,7 +80,7 @@ main{
     -webkit-text-fill-color: transparent; 
     opacity: 0;
     &:hover{
-    animation: heart 400ms linear forwards;}
+    animation: heart-hover 400ms linear forwards;}
 }
 
 .heart-regular{
@@ -88,6 +90,7 @@ main{
 
 .menu
     {
+
         background-color: #F5F5F5;
         width: 100%;
         position: relative;
@@ -107,6 +110,7 @@ main{
             h2{
                 margin: 30px;
                 font-weight: 400;
+                padding-top: 6px;
             }
             i{
                 font-size: 25px;
@@ -116,10 +120,10 @@ main{
             display: flex;
             flex-direction: column;
             align-items: center; 
-            animation: menu 1s ease-in-out forwards;
+            animation: cardmenu-apparition 1400ms ease-in-out forwards;
             position: relative;
             &__title{
-                @include titlecard
+                @include titlecardmenu
                 }
             &__card{
             @include cardmenu;
@@ -130,10 +134,10 @@ main{
             display: flex;
             flex-direction: column;
             align-items: center;
-            animation: menu 2s ease-in-out forwards;
+            animation: cardmenu-apparition 2400ms ease-in-out forwards;
             position: relative;
             &__title{
-                @include titlecard
+                @include titlecardmenu
             }
             &__card{
             @include cardmenu;  
@@ -144,10 +148,10 @@ main{
             display: flex;
             flex-direction: column;
             align-items: center;
-            animation: menu 3s ease-in-out forwards;
+            animation: cardmenu-apparition 3400ms ease-in-out forwards;
             position: relative;
             &__title{
-                @include titlecard
+                @include titlecardmenu
             }
             &__card{
             @include cardmenu;  
@@ -170,7 +174,6 @@ main{
 .footer{
     @include footer;
 }
-
 
 
 
@@ -325,6 +328,9 @@ main img{
                 margin: 50px;
                 }
             }
+            .heart-regular, .heart-solid{
+                left: 400px;
+            }
             &--1{
                 &__title{
                     width: 4%;
@@ -394,7 +400,7 @@ main img{
     }
     
     .btn{
-        margin-left: 37%;
+        margin-left: 36%;
         width: 25%;
         font-size: 20px;
     }

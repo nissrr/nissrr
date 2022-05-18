@@ -38,55 +38,25 @@
   }
 }
 
-@-webkit-keyframes btncard {
+@-webkit-keyframes heart-hover {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    opacity: 1;
   }
 }
 
-@keyframes btncard {
+@keyframes heart-hover {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    opacity: 1;
   }
 }
 
-@-webkit-keyframes btncardhover {
-  0% {
-    -webkit-filter: brightness(100%);
-            filter: brightness(100%);
-  }
-  100% {
-    -webkit-filter: brightness(115%);
-            filter: brightness(115%);
-    -webkit-box-shadow: 0 6px 27px #828282;
-            box-shadow: 0 6px 27px #828282;
-  }
-}
-
-@keyframes btncardhover {
-  0% {
-    -webkit-filter: brightness(100%);
-            filter: brightness(100%);
-  }
-  100% {
-    -webkit-filter: brightness(115%);
-            filter: brightness(115%);
-    -webkit-box-shadow: 0 6px 27px #828282;
-            box-shadow: 0 6px 27px #828282;
-  }
-}
-
-@-webkit-keyframes menu {
+@-webkit-keyframes cardmenu-apparition {
   0% {
     opacity: 0;
     top: 15px;
@@ -97,7 +67,7 @@
   }
 }
 
-@keyframes menu {
+@keyframes cardmenu-apparition {
   0% {
     opacity: 0;
     top: 15px;
@@ -108,42 +78,7 @@
   }
 }
 
-@-webkit-keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes pricecard {
-  0% {
-    padding-right: 10px;
-  }
-  100% {
-    padding-right: 80px;
-  }
-}
-
-@keyframes pricecard {
-  0% {
-    padding-right: 10px;
-  }
-  100% {
-    padding-right: 80px;
-  }
-}
-
+/* CHECK */
 @-webkit-keyframes checki {
   0% {
     -webkit-transform: rotate(0);
@@ -154,7 +89,6 @@
             transform: rotate(360deg);
   }
 }
-
 @keyframes checki {
   0% {
     -webkit-transform: rotate(0);
@@ -166,10 +100,50 @@
   }
 }
 
+@-webkit-keyframes checkcardmenu {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes checkcardmenu {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes pricecardmenu {
+  0% {
+    padding-right: 10px;
+  }
+  100% {
+    padding-right: 80px;
+  }
+}
+
+@keyframes pricecardmenu {
+  0% {
+    padding-right: 10px;
+  }
+  100% {
+    padding-right: 80px;
+  }
+}
+
 .menu--1__card:hover .menu--1__card__check {
   opacity: 1;
-  -webkit-animation: btncard 400ms linear forwards;
-          animation: btncard 400ms linear forwards;
+  -webkit-animation: checkcardmenu 400ms linear forwards;
+          animation: checkcardmenu 400ms linear forwards;
 }
 
 .menu--1__card:hover .menu--1__card__check i {
@@ -178,14 +152,14 @@
 }
 
 .menu--1__card:hover .price-hover {
-  -webkit-animation: pricecard 400ms linear forwards;
-          animation: pricecard 400ms linear forwards;
+  -webkit-animation: pricecardmenu 400ms linear forwards;
+          animation: pricecardmenu 400ms linear forwards;
 }
 
 .menu--2__card:hover .menu--2__card__check {
   opacity: 1;
-  -webkit-animation: btncard 400ms linear forwards;
-          animation: btncard 400ms linear forwards;
+  -webkit-animation: checkcardmenu 400ms linear forwards;
+          animation: checkcardmenu 400ms linear forwards;
 }
 
 .menu--2__card:hover .menu--2__card__check i {
@@ -194,14 +168,14 @@
 }
 
 .menu--2__card:hover .price-hover {
-  -webkit-animation: pricecard 400ms linear forwards;
-          animation: pricecard 400ms linear forwards;
+  -webkit-animation: pricecardmenu 400ms linear forwards;
+          animation: pricecardmenu 400ms linear forwards;
 }
 
 .menu--3__card:hover .menu--3__card__check {
   opacity: 1;
-  -webkit-animation: btncard 400ms linear forwards;
-          animation: btncard 400ms linear forwards;
+  -webkit-animation: checkcardmenu 400ms linear forwards;
+          animation: checkcardmenu 400ms linear forwards;
 }
 
 .menu--3__card:hover .menu--3__card__check i {
@@ -210,8 +184,34 @@
 }
 
 .menu--3__card:hover .price-hover {
-  -webkit-animation: pricecard 400ms linear forwards;
-          animation: pricecard 400ms linear forwards;
+  -webkit-animation: pricecardmenu 400ms linear forwards;
+          animation: pricecardmenu 400ms linear forwards;
+}
+
+@-webkit-keyframes btn-hover {
+  0% {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  100% {
+    -webkit-filter: brightness(115%);
+            filter: brightness(115%);
+    -webkit-box-shadow: 0 6px 27px #828282;
+            box-shadow: 0 6px 27px #828282;
+  }
+}
+
+@keyframes btn-hover {
+  0% {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  100% {
+    -webkit-filter: brightness(115%);
+            filter: brightness(115%);
+    -webkit-box-shadow: 0 6px 27px #828282;
+            box-shadow: 0 6px 27px #828282;
+  }
 }
 
 @font-face {
@@ -255,8 +255,9 @@ img {
 }
 
 .header #--logo {
-  font-size: 15px;
+  font-size: 20px;
   margin-left: 30px;
+  margin-bottom: 4px;
 }
 
 .header a {
@@ -294,8 +295,8 @@ main img {
 }
 
 .heart-solid:hover {
-  -webkit-animation: heart 400ms linear forwards;
-          animation: heart 400ms linear forwards;
+  -webkit-animation: heart-hover 400ms linear forwards;
+          animation: heart-hover 400ms linear forwards;
 }
 
 .heart-regular {
@@ -340,6 +341,7 @@ main img {
 .menu--title h2 {
   margin: 30px;
   font-weight: 400;
+  padding-top: 6px;
 }
 
 .menu--title i {
@@ -357,8 +359,8 @@ main img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: menu 1s ease-in-out forwards;
-          animation: menu 1s ease-in-out forwards;
+  -webkit-animation: cardmenu-apparition 1400ms ease-in-out forwards;
+          animation: cardmenu-apparition 1400ms ease-in-out forwards;
   position: relative;
 }
 
@@ -377,8 +379,8 @@ main img {
 
 .menu--1__card {
   background-color: white;
-  -webkit-box-shadow: 1px 1px 12px 0px #dcdcdc;
-          box-shadow: 1px 1px 12px 0px #dcdcdc;
+  -webkit-box-shadow: 11px 6px 8px 0 #dcdcdc;
+          box-shadow: 11px 6px 8px 0 #dcdcdc;
   border-radius: 15px;
   margin-bottom: 15px;
   width: 90%;
@@ -413,6 +415,10 @@ main img {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.menu--1__card__element p + p {
+  text-overflow: initial;
 }
 
 .menu--1__card__element .price-hover {
@@ -460,8 +466,8 @@ main img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: menu 2s ease-in-out forwards;
-          animation: menu 2s ease-in-out forwards;
+  -webkit-animation: cardmenu-apparition 2400ms ease-in-out forwards;
+          animation: cardmenu-apparition 2400ms ease-in-out forwards;
   position: relative;
 }
 
@@ -480,8 +486,8 @@ main img {
 
 .menu--2__card {
   background-color: white;
-  -webkit-box-shadow: 1px 1px 12px 0px #dcdcdc;
-          box-shadow: 1px 1px 12px 0px #dcdcdc;
+  -webkit-box-shadow: 11px 6px 8px 0 #dcdcdc;
+          box-shadow: 11px 6px 8px 0 #dcdcdc;
   border-radius: 15px;
   margin-bottom: 15px;
   width: 90%;
@@ -516,6 +522,10 @@ main img {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.menu--2__card__element p + p {
+  text-overflow: initial;
 }
 
 .menu--2__card__element .price-hover {
@@ -563,8 +573,8 @@ main img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: menu 3s ease-in-out forwards;
-          animation: menu 3s ease-in-out forwards;
+  -webkit-animation: cardmenu-apparition 3400ms ease-in-out forwards;
+          animation: cardmenu-apparition 3400ms ease-in-out forwards;
   position: relative;
 }
 
@@ -583,8 +593,8 @@ main img {
 
 .menu--3__card {
   background-color: white;
-  -webkit-box-shadow: 1px 1px 12px 0px #dcdcdc;
-          box-shadow: 1px 1px 12px 0px #dcdcdc;
+  -webkit-box-shadow: 11px 6px 8px 0 #dcdcdc;
+          box-shadow: 11px 6px 8px 0 #dcdcdc;
   border-radius: 15px;
   margin-bottom: 15px;
   width: 90%;
@@ -619,6 +629,10 @@ main img {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.menu--3__card__element p + p {
+  text-overflow: initial;
 }
 
 .menu--3__card__element .price-hover {
@@ -675,8 +689,8 @@ main img {
 }
 
 .btn:hover {
-  -webkit-animation: btncardhover 500ms ease-in-out forwards;
-          animation: btncardhover 500ms ease-in-out forwards;
+  -webkit-animation: btn-hover 500ms ease-in-out forwards;
+          animation: btn-hover 500ms ease-in-out forwards;
 }
 
 .footer {
@@ -844,6 +858,9 @@ main img {
     font-size: 30px;
     margin: 50px;
   }
+  .menu .heart-regular, .menu .heart-solid {
+    left: 400px;
+  }
   .menu--1__title {
     width: 4%;
     font-size: 20px;
@@ -905,7 +922,7 @@ main img {
     font-size: 20px;
   }
   .btn {
-    margin-left: 37%;
+    margin-left: 36%;
     width: 25%;
     font-size: 20px;
   }
