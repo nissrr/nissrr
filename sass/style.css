@@ -542,7 +542,9 @@ main h2 {
 
 .restaurantcard--element__heart .heart-solid {
   position: relative;
-  bottom: 16.5px;
+  bottom: 17px;
+  font-size: 26px;
+  right: 0.5px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
