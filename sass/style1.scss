@@ -203,6 +203,12 @@ main img{
             font-size: 35px;
             margin: 50px;
             }
+            i{
+                font-size: 30px;
+            }
+        }
+        .heart-regular , .heart-solid{
+            left: 450px;
         }
         &--1{
             &__title{
@@ -215,12 +221,14 @@ main img{
                 font-size: 23px;
             }
             &__check{
+                width: 15%;
                 i{
                 top: 30px;
                 font-size: 30px;
                 }
             }
-            &__element p{
+            &__element 
+            p{
                 font-size: 20px;
             }
             }
@@ -236,6 +244,7 @@ main img{
                 font-size: 23px;
             }
             &__check{
+                width: 15%;
                 i{
                 top: 30px;
                 font-size: 30px;
@@ -257,7 +266,7 @@ main img{
                 font-size: 23px;
             }
             &__check{
-                width: 5%;
+                width: 15%;
                 i{
                 top: 30px;
                 font-size: 30px;

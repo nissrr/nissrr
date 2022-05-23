@@ -167,6 +167,7 @@ img{
         }
         &__txt{
             font-family: roboto-bold;
+            padding-right: 10px;
             }
     }
 }
@@ -274,39 +275,7 @@ main {
 
 .footer
 {
-    display: flex;
-    flex-direction: column;
-    background-color: lighten(#111, 15%);
-    color: white;
-    h2{
-        font-family: shrikand;
-        font-size: 20px;
-    }
-    p{
-        margin: 0;
-        padding-bottom: 10px;
-    }
-    &--txt{
-        padding-left: 25px;
-        padding-bottom: 20px;
-        &__logo{
-            display: flex;
-            align-items: center;
-            #logo-element-1{
-                font-size: 12px;
-                margin-bottom: 10px;
-            }
-            #logo-element-2{
-                font-size: 12px;
-                width: 11px;
-                margin-bottom: 10px;
-            }
-            p{
-                padding-left: 10px;
-            }
-        }
-    }
-    
+    @include footer;
 }
 
 
@@ -425,7 +394,9 @@ main {
 
     .fonctionnement{
         align-items: center;
-
+        .ajustement-txt{
+            margin-right: 7px;
+        }
     }
 
     .btn-2{

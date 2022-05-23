@@ -705,6 +705,11 @@ main img {
   color: white;
 }
 
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
 .footer h2 {
   font-family: shrikand;
   font-size: 20px;
@@ -713,6 +718,7 @@ main img {
 .footer p {
   margin: 0;
   padding-bottom: 10px;
+  font-family: roboto;
 }
 
 .footer--txt {
@@ -761,6 +767,12 @@ main img {
     font-size: 35px;
     margin: 50px;
   }
+  .menu--title i {
+    font-size: 30px;
+  }
+  .menu .heart-regular, .menu .heart-solid {
+    left: 450px;
+  }
   .menu--1__title {
     width: 7%;
     font-size: 20px;
@@ -770,6 +782,9 @@ main img {
   }
   .menu--1__card h3 {
     font-size: 23px;
+  }
+  .menu--1__card__check {
+    width: 15%;
   }
   .menu--1__card__check i {
     top: 30px;
@@ -787,6 +802,9 @@ main img {
   }
   .menu--2__card h3 {
     font-size: 23px;
+  }
+  .menu--2__card__check {
+    width: 15%;
   }
   .menu--2__card__check i {
     top: 30px;
@@ -806,7 +824,7 @@ main img {
     font-size: 23px;
   }
   .menu--3__card__check {
-    width: 5%;
+    width: 15%;
   }
   .menu--3__card__check i {
     top: 30px;
