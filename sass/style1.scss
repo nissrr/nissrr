@@ -43,21 +43,22 @@ img{
     display: flex;
     align-items: center;
     margin-top: 5%;
-    #--logo{
-        font-size: 20px;
-        margin-left: 30px;
-        margin-bottom: 4px;
-
-    }
-        a{
-            text-decoration: none;
-            color: black;
+    a{
+        text-decoration: none;
+        color: black;
         }
     img{
         width: 40%;
         padding-left: 70px;
         align-items: center;
     } 
+}
+
+#header--logo{
+    font-size: 20px;
+    margin-left: 30px;
+    margin-bottom: 4px;
+
 }
 
 //***** MAIN *****//
@@ -187,10 +188,11 @@ main{
 
 .header{
     justify-content: center;
-    #--logo{
-        font-size: 25px;
-        margin-right: 150px;
-    }
+}
+
+#header--logo{
+    font-size: 25px;
+    margin-right: 150px;
 }
 
 main img{
@@ -320,10 +322,10 @@ main img{
     .header{
         justify-content: center;
         margin-top: 3%;
-        #--logo{
-            font-size: 25px;
-            margin-right: 150px;
-        }
+    }
+    #header--logo{
+        font-size: 25px;
+        margin-right: 150px;
     }
     main img{
         height: 600px;

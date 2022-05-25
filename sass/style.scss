@@ -230,7 +230,7 @@ main {
                 &__new{
                     position: relative;
                     bottom: 180px;
-                    left: 65px;
+                    left: 90px;
                     background-color: $color-tertiary;
                     height: 35px;
                     line-height: 0.3;
@@ -247,10 +247,7 @@ main {
                 &__heart{
                     font-size: 25px;
                     .heart-solid{
-                        position: relative;
-                        bottom: 17px;
                         font-size: 26px;
-                        right: 0.5px;
                         background: linear-gradient(#FF79DA, #9356DC);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;   
@@ -261,7 +258,7 @@ main {
                     }
                     .heart-regular{
                         position: relative;
-                        top: 11.5px;
+                        left: 31.5px
                     }
                 }
                     

@@ -521,7 +521,7 @@ main h2 {
 .restaurantcard--element__new {
   position: relative;
   bottom: 180px;
-  left: 65px;
+  left: 90px;
   background-color: #99E2D0;
   height: 35px;
   line-height: 0.3;
@@ -542,10 +542,7 @@ main h2 {
 }
 
 .restaurantcard--element__heart .heart-solid {
-  position: relative;
-  bottom: 17px;
   font-size: 26px;
-  right: 0.5px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
@@ -560,7 +557,7 @@ main h2 {
 
 .restaurantcard--element__heart .heart-regular {
   position: relative;
-  top: 11.5px;
+  left: 31.5px;
 }
 
 .footer {
